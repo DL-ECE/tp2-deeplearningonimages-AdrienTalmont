@@ -200,10 +200,7 @@ def target_to_one_hot(targets: torch.Tensor, num_classes=10) -> torch.Tensor:
     for i in range(0,targets.shape[0]):
       label = int(targets[i])
       one_hot_matrix[i,label] = 1
-
     return one_hot_matrix
-
-print('Compiled')
 
 # However as mention above pytorch already has some built-ins function 
 
@@ -241,8 +238,6 @@ if __name__ == "__main__":
 
     y_test = target_to_one_hot(y_test)
     #y_test = torch.from_numpy(y_test).long()
-
-print(y_train)
 
 print(y_train)
 y_train = y_train.type(torch.FloatTensor)
@@ -618,8 +613,6 @@ def convolution_forward_torch(image, kernel):
             zobi+= padded_image[x+i,y+j]*kernel[i,j]
         result[x,y] = zobi
     return result
-
-print(convolution_forward_torch(torch.from_numpy(I),torch.from_numpy(K_1)))
 
 """In pytorch you can also access other layer like convolution2D, pooling layers, for example in the following cell use the __torch.nn.MaxPool2d__ to redduce the image size."""
 
