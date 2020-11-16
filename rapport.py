@@ -239,11 +239,6 @@ if __name__ == "__main__":
     y_test = target_to_one_hot(y_test)
     #y_test = torch.from_numpy(y_test).long()
 
-print(y_train)
-y_train = y_train.type(torch.FloatTensor)
-y_test = y_train.type(torch.FloatTensor)
-print(y_train)
-
 """Your remember the famous `class FFNN` from **TP1** ?? 
 
 Here we will create the same version but with pytorch and we will see the power of this framework. 
