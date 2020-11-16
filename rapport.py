@@ -665,10 +665,11 @@ def display_10_images(dataset):
         plt.imshow(dataset.data[i,:,:])
     plt.show()
 
-print('From train set')
-display_10_images(fmnist_train.dataset)
-print('From validation set')
-display_10_images(fmnist_val.dataset)
+if __name__== "__main__":
+  print('From train set')
+  display_10_images(fmnist_train.dataset)
+  print('From validation set')
+  display_10_images(fmnist_val.dataset)
 
 """What is the shape of each images
 How many images do we have
